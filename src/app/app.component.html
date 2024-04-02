@@ -1,22 +1,28 @@
-<div 
-  style="display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-  "
-  >
-    <form action="">
+
+    <form
+      action=""
+      style="display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+       flex-direction: column;
+       gap: 20px;
+       width: 300px;
+       margin: auto;
+      "
+      [formGroup]="form"
+      >
       <!--MatInput-->
       <mat-form-field appeareance="fill">
         <mat-label>Enter your name: </mat-label>
-        <input type="text" matInput placeholder="Name" required="">
-      </mat-form-field>   
-   
+        <input type="text" matInput placeholder="Name" required="" formControlName="name">
+      </mat-form-field>
+
 
     <!--MatSelect-->
     <mat-form-field appeareance="fill">
       <mat-label>Select your favourite food: </mat-label>
-      <mat-select>
+      <mat-select formControlName="favouriteFood">
         <mat-option value="1">Pizza</mat-option>
         <mat-option value="2">Burger</mat-option>
         <mat-option value="3">Pasta</mat-option>
@@ -27,10 +33,10 @@
     <!--MatDatepicker-->
     <mat-form-field appeareance="fill">
       <mat-label>Choose your date of birth: </mat-label>
-      <input matInput [matDatepicker]="picker" required="" />
+      <input matInput [matDatepicker]="picker" required=""  formControlName="dateOfBirth"/>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
-    
+
     </mat-form-field>
 
 
@@ -39,5 +45,5 @@
 
 
   </form>
-</div>
+
 
