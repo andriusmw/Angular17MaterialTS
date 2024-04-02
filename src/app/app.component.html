@@ -5,7 +5,39 @@
         height: 100vh;
   "
   >
-    Hello world!
-    <mat-slide-toggle>Slide me!</mat-slide-toggle>
+    <form action="">
+      <!--MatInput-->
+      <mat-form-field appeareance="fill">
+        <mat-label>Enter your name: </mat-label>
+        <input type="text" matInput placeholder="Name" required="">
+      </mat-form-field>   
+   
+
+    <!--MatSelect-->
+    <mat-form-field appeareance="fill">
+      <mat-label>Select your favourite food: </mat-label>
+      <mat-select>
+        <mat-option value="1">Pizza</mat-option>
+        <mat-option value="2">Burger</mat-option>
+        <mat-option value="3">Pasta</mat-option>
+      </mat-select>
+
+    </mat-form-field>
+
+    <!--MatDatepicker-->
+    <mat-form-field appeareance="fill">
+      <mat-label>Choose your date of birth: </mat-label>
+      <input matInput [matDatepicker]="picker" required="" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    
+    </mat-form-field>
+
+
+
+
+
+
+  </form>
 </div>
 
