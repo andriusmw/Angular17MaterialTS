@@ -1,16 +1,21 @@
-<mat-sidenav-container>
+<mat-sidenav-container style="height: 100vh;">
 
-  <mat-sidenav #sidenav mode="side" opened="true">
-    <p>
-      <a routerLink="/home">Home</a>
-      <a routerLink="/home">About</a>
-      <a routerLink="/home">Contact</a>
-    </p>
+  <mat-sidenav #sidenav mode="side" opened="true"
+    style="width:300px;  background-color: #cccc ">
+    <p> <a routerLink="/home">Home</a> </p>
+    <p> <a routerLink="/home">About</a></p>
+    <p><a routerLink="/home">Contact</a></p>
+
 
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary"></mat-toolbar>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      My App</mat-toolbar>
+    <div>Welcome to our application</div>
     <router-outlet></router-outlet>
 
   </mat-sidenav-content>
