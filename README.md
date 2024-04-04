@@ -31,3 +31,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 We need to instal datepicker with the command: 
 ng add @angular/material-moment-adapter
+
+npm install @angular/flex-layout
