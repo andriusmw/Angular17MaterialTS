@@ -9,7 +9,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { inject } from 'vue';
 import { SidebarComponent } from './sidebar/sidebar.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatGridListModule} from '@angular/material/grid-list'
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatMomentDateModule,
     ReactiveFormsModule,
     SidebarComponent,
+    FlexLayoutModule,
+    MatGridListModule
 
 
   ],
@@ -34,6 +37,14 @@ export class AppComponent {
   /*
   title = 'angular-material-demo';
   */
+
+  tiles = [
+    {text: 'One', cols: 3 , rows: 1},
+    {text: 'Two', cols: 1 , rows: 2},
+    {text: 'Three', cols: 1 , rows: 1},
+    {text: 'Four', cols: 2 , rows: 1}
+
+  ]
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({

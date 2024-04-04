@@ -1,6 +1,15 @@
 
-<app-sidebar></app-sidebar>
+<app-sidebar>
 
+
+</app-sidebar>
+
+<mat-grid-list cols="3" rowHeight="100px" gutterSize="10px">
+  @for (tile of tiles; track $index) {
+    <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows">{{tile.text}} </mat-grid-tile>
+  }
+
+  </mat-grid-list>
 
     <form
       action=""
